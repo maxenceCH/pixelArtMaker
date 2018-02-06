@@ -1,8 +1,23 @@
+html {
+  margin: 0;
+  padding: 0;
+}
 body {
   text-align: center;
+  margin: 0;
+  margin-top: 0;
+  box-sizing: border-box;
+}
+
+#background {
   background-image: url(https://static.pexels.com/photos/194098/pexels-photo-194098.jpeg);
-  background-position: center;
   background-size: cover;
+  min-height: 100vh;
+  width: 100%;
+}
+
+#content {
+  min-height: calc(100vh - 15px);
 }
 
 h1 {
@@ -10,7 +25,7 @@ h1 {
   text-shadow: 1px 1px 1px #fff;
   font-weight: 600;
   font-size: 70px;
-  margin: 0.2em;
+  margin: 0;
   color: #F20075;
 }
 
@@ -74,6 +89,7 @@ input[type=color] {
 ul {
   list-style-type: none;
   padding-left: 0;
+  margin: 0;
 }
 
 hr {
@@ -87,4 +103,7 @@ footer {
   font-family: sans-serif;
   font-weight: 100;
   font-size: 12px;
+  height: 15px;
+  width: 100%;
+  text-align: center;
 }
