@@ -9,6 +9,7 @@ const inputColor = $('input[type="color"]');
 // Function to trigger makeGrid() when submit button is clicked
 inputSubmit.click(function(evt) {
   evt.preventDefault();
+
   // Clear previously made table (if any)
   table.html('');
   makeGrid();
@@ -30,16 +31,19 @@ function clearTable() {
 function makeGrid() {
   height = inputHeight.val();
   width = inputWidth.val();
+
   // Loop to:
   // Create rows
   for (let row = 0; row < height; row++) {
     table.append('<tr></tr>');
+
     //Create columns
     for (let col = 0; col < width; col++) {
       table.children().last().append('<td></td>');
     }
   }
 }
+
 // Function to change the clicked cell background color
 table.on('click', 'td', function() {
   $(this).attr('bgColor', inputColor.val());
@@ -49,3 +53,5 @@ table.on('click', 'td', function() {
 table.on('dblclick', 'td', function() {
   $(this).removeAttr('bgColor', inputColor.val());
 });
+
+makeGrid();
