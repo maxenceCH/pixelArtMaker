@@ -55,3 +55,4 @@ table.on('dblclick', 'td', function() {
 });
 
 makeGrid();
+
